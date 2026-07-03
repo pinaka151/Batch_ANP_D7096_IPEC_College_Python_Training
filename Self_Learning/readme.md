@@ -1,0 +1,1 @@
+This product is for self_learning and projects which will be completely originated by me
