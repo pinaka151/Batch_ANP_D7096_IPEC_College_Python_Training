@@ -1,6 +1,6 @@
-
 # User input of 20 numbers and adding it to list
 list = []
+
 for i in range(20):
     num = int(input(f"Enter {i} number here: "))
     list.append(num)
