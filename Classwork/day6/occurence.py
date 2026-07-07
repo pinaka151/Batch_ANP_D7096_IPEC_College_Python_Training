@@ -9,7 +9,7 @@ print("The Entered List is : ", list)
 
 
 
-# Taking user input for counting the numbre occurencing
+# Taking user input for counting the number occurencing
 element = int(input("Enter the the number to count occurences: "))
 
 print(f"Removing duplicate values of {element} ")
