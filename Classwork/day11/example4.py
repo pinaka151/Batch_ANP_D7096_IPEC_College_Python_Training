@@ -1,4 +1,4 @@
-# importing module usling alias
+# importing module using alias
 
 import numeric_calculation as nc
 
