@@ -1,0 +1,43 @@
+# ---------------- Employee Salary Report ----------------
+
+employees = {}
+
+for i in range(5):
+
+    print("\nEnter Employee", i + 1)
+
+    emp_id = input("Employee ID: ")
+    name = input("Name: ")
+    salary = int(input("Salary: "))
+
+    employees[emp_id] = {
+        "Name": name,
+        "Salary": salary
+    }
+
+print("\nEmployee Details")
+
+highest_salary = 0
+highest_employee = ""
+
+total_salary = 0
+
+for emp_id in employees:
+
+    print(emp_id,
+          employees[emp_id]["Name"],
+          employees[emp_id]["Salary"])
+
+    total_salary += employees[emp_id]["Salary"]
+
+    if employees[emp_id]["Salary"] > highest_salary:
+        highest_salary = employees[emp_id]["Salary"]
+        highest_employee = employees[emp_id]["Name"]
+
+average = total_salary / len(employees)
+
+print("\nHighest Salary")
+print(highest_employee, highest_salary)
+
+print("\nAverage Salary")
+print(average)

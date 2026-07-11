@@ -1,0 +1,35 @@
+# ---------------- Student Grade Analyzer ----------------
+
+def calculate_result(marks):
+    total = sum(marks)
+    percentage = total / 5
+    return total, percentage
+
+
+name = input("Enter Student Name: ")
+
+marks = []
+
+print("Enter Marks of 5 Subjects:")
+for i in range(5):
+    mark = int(input())
+    marks.append(mark)
+
+total, percentage = calculate_result(marks)
+
+if percentage >= 90:
+    grade = "A+"
+elif percentage >= 75:
+    grade = "A"
+elif percentage >= 60:
+    grade = "B"
+elif percentage >= 40:
+    grade = "C"
+else:
+    grade = "Fail"
+
+print("\nStudent Name :", name)
+print("Marks :", marks)
+print("Total :", total)
+print("Percentage :", percentage)
+print("Grade :", grade)

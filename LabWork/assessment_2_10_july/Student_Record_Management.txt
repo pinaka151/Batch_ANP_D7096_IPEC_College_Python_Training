@@ -1,0 +1,68 @@
+# ---------------- Student Record Management ----------------
+
+students = {}
+
+
+def add_student():
+
+    roll = input("Enter Roll Number: ")
+    name = input("Enter Name: ")
+    marks = int(input("Enter Marks: "))
+
+    students[roll] = {
+        "Name": name,
+        "Marks": marks
+    }
+
+    print("Student Added Successfully")
+
+
+def search_student():
+
+    roll = input("Enter Roll Number: ")
+
+    if roll in students:
+        print("Roll Number :", roll)
+        print("Name :", students[roll]["Name"])
+        print("Marks :", students[roll]["Marks"])
+    else:
+        print("Record Not Found")
+
+
+def display_students():
+
+    if len(students) == 0:
+        print("No Records Available")
+    else:
+        print("\nStudent Records")
+        for roll in students:
+            print("----------------------")
+            print("Roll Number :", roll)
+            print("Name :", students[roll]["Name"])
+            print("Marks :", students[roll]["Marks"])
+
+
+while True:
+
+    print("\n1. Add Student")
+    print("2. Search Student")
+    print("3. Display All Students")
+    print("4. Exit")
+
+    choice = int(input("Enter Choice: "))
+
+    if choice == 1:
+        add_student()
+
+    elif choice == 2:
+        search_student()
+
+    elif choice == 3:
+        display_students()
+
+    elif choice == 4:
+        print("Thank You")
+        break
+
+    else:
+        print("Invalid Choice")

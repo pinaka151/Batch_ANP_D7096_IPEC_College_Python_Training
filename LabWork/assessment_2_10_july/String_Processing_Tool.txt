@@ -1,0 +1,40 @@
+# ---------------- String Processing Tool ----------------
+
+def count_vowels(sentence):
+
+    count = 0
+
+    for ch in sentence.lower():
+        if ch in "aeiou":
+            count += 1
+
+    return count
+
+
+def count_consonants(sentence):
+
+    count = 0
+
+    for ch in sentence.lower():
+        if ch.isalpha() and ch not in "aeiou":
+            count += 1
+
+    return count
+
+
+def count_words(sentence):
+    words = sentence.split()
+    return len(words)
+
+
+def reverse_sentence(sentence):
+    return sentence[::-1]
+
+
+sentence = input("Enter a Sentence: ")
+
+print("\nVowels :", count_vowels(sentence))
+print("Consonants :", count_consonants(sentence))
+print("Words :", count_words(sentence))
+print("Reverse :")
+print(reverse_sentence(sentence))
